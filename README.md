@@ -1,9 +1,34 @@
-# IIITD Course Registration System (Enhanced Version)
+# EduTrack
 
-## Introduction
-This project is an enhanced version of the IIITD Course Registration System made previously. It introduces new features such as generic feedback handling, extended user role management via inheritance, and robust exception handling. These enhancements are implemented while maintaining the core functionality of the original system.
+## Project Overview
+The EduTrack Registration System is a Java-based application that is designed to manage course registration, student records, professor assignments, and administrative tasks for a university setting. The system allows students to register for courses, professors to manage their courses, and administrators to oversee and manage the entire system. It is a command line interface and it utilises popular OOPs concepts. It introduces new features such as generic feedback handling, extended user role management via inheritance, and robust exception handling.
 
-## Features
+## Files Overview
+### Main.java
+The main entry point of the application. This file initializes the system, including sample data for students, professors, and courses. It provides the user interface for signing up, logging in, and navigating through the application’s features based on user roles (Student, Professor, Administrator).
+
+### Administrator.java
+Defines the Administrator class, which extends the User class. Administrators can manage the course catalog, student records, and professor assignments. They can also handle complaints and oversee various administrative tasks.
+
+### Student.java
+Defines the Student class, which extends the User class. Students can sign up for courses, view their schedules, track academic progress, drop courses, and manage complaints. The class includes methods for interacting with the course list and performing various student-related actions.
+
+### Professor.java
+Defines the Professor class, which extends the User class. Professors can be assigned to courses, manage course details (e.g., schedule, syllabus, enrollment limits), and view enrolled students. The class includes methods for updating course information and interacting with the courses they are assigned to.
+
+### User.java
+Defines the User class, which serves as a base class for Student and Professor. It includes basic user properties such as email and password, along with methods for login and logout.
+
+### Course.java
+Defines the Course class, representing a university course. It includes properties such as course code, title, credits, schedule, enrollment limit, semester, and location. The class also manages course prerequisites and enrolled students.
+
+### Complaint.java
+Defines the Complaint class, which represents a student complaint. It includes properties for the complaint description and status, and methods for managing complaints.
+
+### UserInterface.java
+Defines an interface that includes login and logout methods, which are implemented by the User class and its subclasses (Student, Professor, and Administrator).
+
+## Additional Features
 
 ### 1. Generic Feedback System
 - **Description**: Students can provide feedback on courses they have completed. Feedback can be either numeric ratings (1–5) or textual comments. They can also view their submitted feedback.
